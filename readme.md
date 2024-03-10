@@ -24,9 +24,6 @@ Before we can make any bots, we first have to install the discord.py library. He
 Discord developer portal: \
 https://discord.com/developers/applications
 
-Invite bot to server: \
-https://discord.com/api/oauth2/authorize?client_id=1197313197129076878&permissions=8&scope=bot
-
 ### On Windows:
 
 Open up your Command Prompt (go the Windows Search Bar and type in "cmd")
@@ -72,6 +69,9 @@ Generate the url it will look similar to the following:
 ```url
 https://discord.com/api/oauth2/authorize?client_id=<your-bots-application-id-ie-client-id>&permissions=8&scope=bot
 ```
+
+Invite bot to server (Example): \
+https://discord.com/api/oauth2/authorize?client_id=1197313197129076878&permissions=8&scope=bot
 
 Copy the url and open a browser page and paste the url in the browser. This will allow you to invite the bot to your discord server.
 
