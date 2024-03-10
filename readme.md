@@ -1,4 +1,5 @@
 # Gemini Discord Bot Tutorial
+If you would like to get this bot up and running replace the variables inside of `config.ini` with your discord id, discord sdk, and gemini sdk values.
 
 ## Google Gemini
 https://ai.google.dev/ 
