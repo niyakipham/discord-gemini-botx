@@ -22,7 +22,7 @@ class GeminiAgent(commands.Cog):
                 dmchannel = await msg.author.create_dm()
                 await self.send_message_in_chunks(dmchannel,response) 
         except Exception as e:
-            return PLEASE_TRY_AGAIN_ERROR_MESSAGE + str(e)
+            await msg.channel.send(PLEASE_TRY_AGAIN_ERROR_MESSAGE + str(e))
 
     @commands.command()
     async def query(self,ctx,question):
@@ -30,7 +30,7 @@ class GeminiAgent(commands.Cog):
             response = self.gemini_generate_content(question)
             await self.send_message_in_chunks(ctx,response)
         except Exception as e:
-            return PLEASE_TRY_AGAIN_ERROR_MESSAGE + str(e)
+            await ctx.send(PLEASE_TRY_AGAIN_ERROR_MESSAGE + str(e))
 
     @commands.command()
     async def pm(self,ctx):
