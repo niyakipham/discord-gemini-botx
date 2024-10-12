@@ -1,7 +1,7 @@
 import configs.DefaultConfig as defaultConfig
 import utils.DiscordUtil as discordUtil
 
-import asyncio
+import asyncio, os
 import discord
 from discord.ext import commands
 from cogs.GeminiCog import GeminiAgent
@@ -26,12 +26,12 @@ async def on_member_join(member):
 
 @bot.command(aliases = ["about"])
 async def help(ctx):
-    MyEmbed = discord.Embed(title = "Commands",
-                            description = "These are the Commands that you can use for this bot. Once you are in a private message with the bot you can interact with it normally without issuing commands",
+    MyEmbed = discord.Embed(title = "UPDATE V10",
+                            description = "CHAT BOT AI",
                             color = discord.Color.dark_purple())
     MyEmbed.set_thumbnail(url = "https://th.bing.com/th/id/OIG.UmTcTiD5tJbm7V26YTp.?w=270&h=270&c=6&r=0&o=5&pid=ImgGn")
-    MyEmbed.add_field(name = "!query", value = "This command allows you to communicate with Gemini AI Bot on the Server. Please wrap your questions with quotation marks.", inline = False)
-    MyEmbed.add_field(name = "!pm", value = "This command allows you to private message the Gemini AI Bot.", inline = False)
+    MyEmbed.add_field(name = "!query", value = "Đặt câu hỏi cho chat bot", inline = False)
+    MyEmbed.add_field(name = "!pm", value = "Nhắn Tin riêng tư với bot.", inline = False)
     await ctx.send(embed = MyEmbed)
 
 @bot.command()
@@ -48,4 +48,4 @@ async def startcogs():
     await bot.add_cog(GeminiAgent(bot))
 
 asyncio.run(startcogs())
-bot.run(defaultConfig.DISCORD_SDK)
+bot.run(os.getenv('DISCORD_TOKEN'))

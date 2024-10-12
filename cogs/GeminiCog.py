@@ -2,7 +2,7 @@ import configs.DefaultConfig as defaultConfig
 from discord.ext import commands
 import google.generativeai as genai
 
-genai.configure(api_key=defaultConfig.GEMINI_SDK)
+genai.configure(api_key='AIzaSyAWfHq_eeR82EB4pdAsxYRS6HFlsAaDaeE')
 DISCORD_MAX_MESSAGE_LENGTH=2000
 PLEASE_TRY_AGAIN_ERROR_MESSAGE='There was an issue with your question please try again.. '
 
