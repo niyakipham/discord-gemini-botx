@@ -4,3 +4,5 @@ pandas
 flask
 requests
 google-generativeai
+configs.DefaultConfig
+utils.DiscordUtil
